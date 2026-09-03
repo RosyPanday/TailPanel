@@ -10,7 +10,7 @@ function Navbar({ setIsExpanded }) {
   }
 
   return (
-    <nav className="flex justify-between m-4 ">
+    <nav className="flex  justify-between m-4 ">
       <div className="flex gap-5 items-center">
         <button onClick={collapseOrExpand} className="p-3">
           <Menu className="text-gray-600 " />
@@ -34,7 +34,7 @@ function Navbar({ setIsExpanded }) {
           <span className="bg-blue-400 rounded-3xl px-3 py-2.5 text-white font-bold ">
             AS
           </span>
-          <div className="flex flex-col">
+          <div className="hidden sm:flex flex-col ">
             <AdminUserCard />
           </div>
         </div>
