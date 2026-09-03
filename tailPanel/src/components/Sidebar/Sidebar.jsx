@@ -1,3 +1,4 @@
+import AdminUserCard from "../utils/AdminUserCard";
 import SideBarScrollableComponent from "./SideBarScrollableComponent";
 
 function Sidebar({ isExpanded ,setIsExpanded}) {
@@ -26,8 +27,7 @@ function Sidebar({ isExpanded ,setIsExpanded}) {
       <div className="flex items-center gap-3  ml-3 pt-3 pb-3 border-r border-t border-gray-100  ">
         <span className={`${isExpanded?"p-2 m-1": "p-2 m-4 "}text-white font-bold bg-blue-500 rounded-full  }`}>AS</span>
         <div className={`${isExpanded?"flex flex-col":"hidden"}`}>
-          <span className="text-md ">Admin User</span>
-          <span className="text-sm text-gray-600 ">admin@tailpanel.com</span>
+           <AdminUserCard />
         </div>
       </div>
     </div>
