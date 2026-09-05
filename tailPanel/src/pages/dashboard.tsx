@@ -1,9 +1,10 @@
-import Layout from "../components/layout/layout";
-import { useDashboard } from "../hooks/use-dashboard";
+import type { UseDashboardReturn } from "../types/layout.js";
+import { useDashboard } from "../hooks/use-dashboard.js";
+import Layout from "../components/layout/layout.js";
 
 function Dashboard() {
   const { isExpanded, toggleSidebar
-   } = useDashboard();
+   } :UseDashboardReturn= useDashboard();
 
   return (
     <>

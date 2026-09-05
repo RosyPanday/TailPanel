@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, type LucideIcon } from "lucide-react";
 
 import { SIDEBAR_ITEMS } from "../../../constants/sidebar-items";
+import type { SidebarScrollableProps } from "../../../types";
 
-function SideBarScrollable({ isExpanded }) {
+function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
   const [activeItem, setActiveItem] = useState("dashboards");
   return SIDEBAR_ITEMS.map((item) => {
-    const IconComponent = item.icon;
+    const IconComponent: LucideIcon = item.icon;
     const isDashboard = item.id === "dashboards";
     return (
       <div key={item.id} className="flex flex-col ml-3 ">

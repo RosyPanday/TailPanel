@@ -2,7 +2,7 @@ import { Menu, Globe, Monitor, Bell } from "lucide-react";
 import AdminUserCard from "../adminUser/admin-user-card";
 import SearchInput from "../../../form/search-input";
 
-function Navbar({ toggleSidebar }) {
+function Navbar({ toggleSidebar }:{toggleSidebar:()=>void}) {
   return (
     <nav className="flex  justify-between m-4 ">
       <div className="flex gap-5 items-center">

@@ -1,7 +1,8 @@
-import Sidebar from './sidebar/sidebar';
-import Navbar from './navbar/navbar'
+import type { LayoutProps } from '../../types/layout.js';
+import Navbar from './navbar/navbar.js';
+import Sidebar from './sidebar/sidebar.js';
 
-function Layout({ isExpanded,toggleSidebar}) {
+function Layout({ isExpanded,toggleSidebar}:LayoutProps) {
   
   return (
     <>

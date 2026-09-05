@@ -1,7 +1,8 @@
-import AdminUserCard from "../adminUser/admin-user-card";
-import SideBarScrollable from "./side-bar-scrollable";
+import type { SidebarProps } from "../../../types/layout.js";
+import AdminUserCard from "../adminUser/admin-user-card.js";
+import SideBarScrollable from "./side-bar-scrollable.js";
 
-function Sidebar({ isExpanded ,toggleSidebar}) {
+function Sidebar({ isExpanded ,toggleSidebar}:SidebarProps) {
  
   return (
     <div className={`flex flex-col h-screen `}>
@@ -23,7 +24,7 @@ function Sidebar({ isExpanded ,toggleSidebar}) {
       </div>
 
       <div className="flex items-center gap-3  ml-3 pt-3 pb-3 border-r border-t border-gray-100  ">
-        <span className={`${isExpanded?"p-2 m-1": "p-2 m-4 "}text-white font-bold bg-blue-500 rounded-full  }`}>AS</span>
+        <span className={`${isExpanded?"p-2 m-1": "p-2 m-4 "}text-white font-bold bg-blue-500 rounded-full`}>AS</span>
         <div className={`${isExpanded?"flex flex-col":"hidden"}`}>
            <AdminUserCard />
         </div>
