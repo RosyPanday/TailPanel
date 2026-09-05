@@ -1,10 +1,8 @@
-import AdminUserCard from "../utils/AdminUserCard";
-import SideBarScrollableComponent from "./SideBarScrollableComponent";
+import AdminUserCard from "../adminUser/admin-user-card";
+import SideBarScrollable from "./side-bar-scrollable";
 
-function Sidebar({ isExpanded ,setIsExpanded}) {
-  function collapse(){
-    setIsExpanded(false);
-  }
+function Sidebar({ isExpanded ,toggleSidebar}) {
+ 
   return (
     <div className={`flex flex-col h-screen `}>
       {/* tailpanel div */}
@@ -15,13 +13,13 @@ function Sidebar({ isExpanded ,setIsExpanded}) {
               </span>
               <span className={`${isExpanded?" block font-bold text-xl":"hidden"}`} >TailPanel</span>
             </div>
-            <button onClick={collapse} className={`${isExpanded?"font-normal px-2 rounded-lg text-lg hover:bg-gray-100":"hidden md:block p-3 lg:hidden"}`}>
+            <button onClick={toggleSidebar} className={`${isExpanded?"font-normal px-2 rounded-lg text-lg hover:bg-gray-100":"hidden md:block p-3 lg:hidden"}`}>
               🗙
             </button>
         </div>
 
       <div className="border-r border-gray-100 flex-1 overflow-y-auto">
-        <SideBarScrollableComponent isExpanded={isExpanded} />
+        <SideBarScrollable isExpanded={isExpanded} />
       </div>
 
       <div className="flex items-center gap-3  ml-3 pt-3 pb-3 border-r border-t border-gray-100  ">
