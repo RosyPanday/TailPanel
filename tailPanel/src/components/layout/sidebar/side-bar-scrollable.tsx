@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, type LucideIcon } from "lucide-react";
-
-import { SIDEBAR_ITEMS } from "../../../constants/sidebar-items";
-import type { SidebarScrollableProps } from "../../../types";
+import { SIDEBAR_ITEMS } from "../../../constants/sidebar-items.js";
+import type { SidebarScrollableProps } from "../../../types/layout.js";
 
 function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
   const [activeItem, setActiveItem] = useState("dashboards");

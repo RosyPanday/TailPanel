@@ -1,10 +1,11 @@
 import { Menu, Globe, Monitor, Bell } from "lucide-react";
-import AdminUserCard from "../adminUser/admin-user-card";
-import SearchInput from "../../../form/search-input";
+import SearchInput from "../../../form/search-input.js";
+import AdminUserCard from "../adminUser/admin-user-card.js";
+
 
 function Navbar({ toggleSidebar }:{toggleSidebar:()=>void}) {
   return (
-    <nav className="flex  justify-between m-4 ">
+    <nav className="flex  justify-between m-2 ">
       <div className="flex gap-5 items-center">
         <button onClick={toggleSidebar} className="p-3">
           <Menu className="text-gray-600 " />

@@ -2,7 +2,7 @@ import type { LayoutProps } from '../../types/layout.js';
 import Navbar from './navbar/navbar.js';
 import Sidebar from './sidebar/sidebar.js';
 
-function Layout({ isExpanded,toggleSidebar}:LayoutProps) {
+function Layout({ isExpanded,toggleSidebar,children}:LayoutProps) {
   
   return (
     <>
@@ -17,9 +17,12 @@ function Layout({ isExpanded,toggleSidebar}:LayoutProps) {
       </div>
       {/* navbar */}
       <div
-        className={`${isExpanded ? "  relative col-span-12  lg:col-span-9   " : "col-span-12 lg:col-span-11"}`}
+        className={`${isExpanded ? " col-span-12  lg:col-span-9   " : "col-span-12 lg:col-span-11"}    flex flex-col`}
       >
         <Navbar toggleSidebar={toggleSidebar}/>
+        <main className="bg-gray-100 min-h-screen flex-1">
+          {children}
+        </main>
       </div>
     </>
   );
