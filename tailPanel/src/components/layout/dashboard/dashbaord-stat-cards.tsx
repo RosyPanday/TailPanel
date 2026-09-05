@@ -4,9 +4,8 @@ import { STAT_CARD_ITEMS } from "../../../constants/dashbaord-stat-card-items.js
 function DashboardStatCards() {
   return STAT_CARD_ITEMS.map((item) => {
     const IconComponent = item.icon;
-    const SideIconComponent = item.isPositive ? TrendingUp : TrendingDown;
     return (
-      <div className="flex flex-1 bg-white py-7 px-5 gap-2 rounded-xl">
+      <div className="flex flex-1 bg-white py-7 px-5 gap-2 rounded-xl justify-between">
           <div className="flex flex-col gap-1 ">
             <span className="text-gray-600 text-sm font-semibold">
               {item.name}
@@ -14,15 +13,15 @@ function DashboardStatCards() {
             <span className="font-bold text-3xl">{item.value}</span>
             <div className="flex gap-2 mt-2">
               {/* second icon */}
-              <div className="flex bg-green-100 px-2  rounded-full gap-1 justify-center items-center">
-                <span className="text-green-600   ">
+              <div className={`flex ${item.isPositive?"bg-green-100":"bg-red-100"}  px-2  rounded-full gap-1 justify-center items-center`}>
+                <span >
                   {item.isPositive ? (
-                    <TrendingUp className="w-3 h-3 " />
+                    <TrendingUp className="w-3 h-3 text-green-600 " />
                   ) : (
-                    <TrendingDown className="w-3 h-3" />
+                    <TrendingDown className="w-3 h-3 text-red-600" />
                   )}
                 </span>
-                <span className="text-xs font-semibold text-green-600">
+                <span className={`text-xs font-semibold ${item.isPositive?"text-green-600":"text-red-600"} `}>
                   {item.change}
                 </span>
               </div>
