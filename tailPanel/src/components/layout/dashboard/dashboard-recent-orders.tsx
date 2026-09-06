@@ -1,0 +1,31 @@
+import { RECENT_ORDERS } from "../../../constants/dashbaord-items.js";
+
+function DashboardRecentOrders() {
+  return RECENT_ORDERS.map((item) => {
+    const status=item.status;
+    let classes="";
+    if(status==="completed"){
+        classes="bg-green-100 text-green-600"
+    } else if(status==="pending"){
+        classes="bg-amber-100 text-amber-600"
+    } else{
+        classes="bg-blue-100 text-blue-600"
+    }
+    return (
+      <div className="flex flex-col p-3 pl-1" key={item.id}>
+        <div className="flex justify-between items-center">
+          <div className="flex flex-col">
+            <span className="font-semibold text-md">{item.customer}</span>
+            <span className="text-gray-600 text-sm">{item.product}</span>
+          </div>
+          <div className="flex flex-col ">
+              <span className="font-semibold text-md ">{item.amount}</span>
+              <span className={`${classes} p-1 px-3 rounded-lg`}>{item.status}</span>
+          </div>
+        </div>
+      </div>
+    );
+  });
+}
+
+export default DashboardRecentOrders;

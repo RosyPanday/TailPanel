@@ -1,6 +1,7 @@
 import { House, ChevronRight } from 'lucide-react';
 import DashboardStatCards from './dashbaord-stat-cards.js';
 import DashboardCharts from './dashbaord-charts.js';
+import DashboardRecentOrders from './dashboard-recent-orders.js';
 
 function DashboardContent(){
     return(
@@ -25,6 +26,14 @@ function DashboardContent(){
               {/* charts */}
               <div className='flex py-6 gap-2'>
                   <DashboardCharts />
+              </div>
+              {/* recent orders and top products */}
+              <div className='flex gap-4'>
+                {/* recent orders */}
+                <div className='flex flex-1 flex-col bg-white p-5 rounded-lg'>
+                    <h3 className='font-bold text-2xl'>Recent Orders</h3>
+                    <DashboardRecentOrders />
+                </div>
               </div>
         </div>
     )

@@ -1,5 +1,5 @@
 import { TrendingDown, TrendingUp } from "lucide-react";
-import { STAT_CARD_ITEMS } from "../../../constants/dashbaord-stat-card-items.js";
+import { STAT_CARD_ITEMS } from "../../../constants/dashbaord-items.js";
 
 function DashboardStatCards() {
   return STAT_CARD_ITEMS.map((item) => {

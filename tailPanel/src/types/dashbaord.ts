@@ -15,3 +15,21 @@ export interface ChartDataInterface {
   profit: number;
   expenses: number;
 }
+
+export interface RecentOrdersInterface {
+  id: number;
+  customer: string;
+  product: string;
+  amount: string;
+  status: string;
+}
+
+export interface TopProducsInterface{
+
+    id: number,
+    product: string,
+    sales: string,
+    revenue: string,
+    growth: string,
+    isPositive: boolean,
+}
