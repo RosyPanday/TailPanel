@@ -8,3 +8,10 @@ export interface DashbaordStatCardItemsInterface {
   change: string;
   isPositive: boolean;
 }
+
+export interface ChartDataInterface {
+  month: string;
+  revenue: number;
+  profit: number;
+  expenses: number;
+}

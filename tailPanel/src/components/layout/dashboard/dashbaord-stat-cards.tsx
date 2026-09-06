@@ -5,7 +5,7 @@ function DashboardStatCards() {
   return STAT_CARD_ITEMS.map((item) => {
     const IconComponent = item.icon;
     return (
-      <div className="flex flex-1 bg-white py-7 px-5 gap-2 rounded-xl justify-between">
+      <div className="flex flex-1 bg-white py-7 px-5 gap-2 rounded-xl justify-between " key={item.id}>
           <div className="flex flex-col gap-1 ">
             <span className="text-gray-600 text-sm font-semibold">
               {item.name}

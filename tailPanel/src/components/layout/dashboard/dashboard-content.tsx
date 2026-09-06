@@ -1,5 +1,6 @@
 import { House, ChevronRight } from 'lucide-react';
 import DashboardStatCards from './dashbaord-stat-cards.js';
+import DashboardCharts from './dashbaord-charts.js';
 
 function DashboardContent(){
     return(
@@ -20,7 +21,11 @@ function DashboardContent(){
               <div className="flex flex-wrap gap-3 items-center mt-4">
                     <DashboardStatCards />
               </div>
-
+              
+              {/* charts */}
+              <div className='flex py-6 gap-2'>
+                  <DashboardCharts />
+              </div>
         </div>
     )
 }
