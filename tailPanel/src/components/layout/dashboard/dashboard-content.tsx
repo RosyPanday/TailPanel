@@ -4,7 +4,7 @@ import DashboardCharts from './dashbaord-charts.js';
 
 function DashboardContent(){
     return(
-        <div className="flex flex-col m-5">
+        <div className="flex flex-col m-5 ">
              {/* top */}
                 <div className="flex flex-row gap-2 text-gray-600 items-center text-sm">
                     <House className="w-4 h-4" />
