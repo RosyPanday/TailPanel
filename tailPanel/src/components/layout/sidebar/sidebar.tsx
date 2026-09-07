@@ -2,31 +2,45 @@ import type { SidebarProps } from "../../../types/layout.js";
 import AdminUserCard from "../adminUser/admin-user-card.js";
 import SideBarScrollable from "./side-bar-scrollable.js";
 
-function Sidebar({ isExpanded ,toggleSidebar}:SidebarProps) {
- 
+function Sidebar({ isExpanded, toggleSidebar }: SidebarProps) {
   return (
     <div className={`flex flex-col h-screen `}>
       {/* tailpanel div */}
-        <div className={`${isExpanded?"justify-between ":"justify-center"} flex p-4 border-b border-r border-gray-100`}>
-            <div className="flex  gap-3 items-center">
-              <span className="font-bold text-xl px-2.5 py-0.5 rounded-lg bg-blue-600 text-white ">
-                T
-              </span>
-              <span className={`${isExpanded?" block font-bold text-xl":"hidden"}`} >TailPanel</span>
-            </div>
-            <button onClick={toggleSidebar} className={`${isExpanded?"font-normal px-2 rounded-lg text-lg hover:bg-gray-100 ":"md:block p-3 "} lg:hidden cursor-pointer`}>
-              🗙
-            </button>
+      <div
+        className={`${isExpanded ? "justify-between " : "justify-center"} flex p-4 border-b border-r border-gray-100`}
+      >
+        <div className="flex  gap-3 items-center">
+          <span className="font-bold text-xl px-2.5 py-0.5 rounded-lg bg-blue-600 text-white ">
+            T
+          </span>
+          <span
+            className={`${isExpanded ? " block font-bold text-xl" : "hidden"}`}
+          >
+            TailPanel
+          </span>
         </div>
+        <button
+          onClick={toggleSidebar}
+          className={`${isExpanded ? "font-normal px-2 rounded-lg text-lg hover:bg-gray-100 " : "md:block p-3 "} lg:hidden cursor-pointer`}
+        >
+          🗙
+        </button>
+      </div>
 
       <div className="border-r border-gray-100 flex-1 overflow-y-auto">
         <SideBarScrollable isExpanded={isExpanded} />
       </div>
 
-      <div className="flex items-center gap-3  ml-3 pt-3 pb-3 border-r border-t border-gray-100  ">
-        <span className={`${isExpanded?"p-2 m-1": "px-3 py-3 my-4 mx-2 "}text-white font-bold bg-blue-500 rounded-full text-sm h-11`}>AS</span>
-        <div className={`${isExpanded?"flex flex-col":"hidden"}`}>
-           <AdminUserCard />
+      <div
+        className={`flex items-center ${isExpanded ? "px-4" : "justify-center "} gap-3  py-3 border-r border-t border-gray-100  `}
+      >
+        <span
+          className={`${isExpanded ? "p-2 m-1" : "p-3 m-2 "}text-white font-bold bg-blue-500 rounded-full text-sm `}
+        >
+          AS
+        </span>
+        <div className={`${isExpanded ? "flex flex-col" : "hidden"}`}>
+          <AdminUserCard />
         </div>
       </div>
     </div>

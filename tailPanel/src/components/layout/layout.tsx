@@ -17,7 +17,7 @@ function Layout({ isExpanded,toggleSidebar,children}:LayoutProps) {
       </div>
       {/* navbar */}
       <div
-        className={`flex-1 shrink-0 flex flex-col`}
+        className="flex-1 shrink-0 flex flex-col"
       >
         <div className='sticky top-0 bg-white z-10'>
               <Navbar toggleSidebar={toggleSidebar}/>

@@ -28,7 +28,7 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
           <div>
             <span className={`${isExpanded ? "block" : "hidden"}`}>
               <ChevronDown
-                className={`${isDashboard ? "text-blue-600" : "text-gray-600"} w-4 h-4`}
+                className={`${isDashboard ? "text-blue-600" : "text-gray-600"} size-4`}
               />
             </span>
           </div>

@@ -7,13 +7,11 @@ function Dashboard() {
   const { isExpanded, toggleSidebar }: UseDashboardReturn = useDashboard();
 
   return (
-    <>
-      <div className= {`flex lg:flex font-['Arial']`}>
-        <Layout isExpanded={isExpanded} toggleSidebar={toggleSidebar} >
-           <DashboardContent />
-          </Layout>
-      </div>
-    </>
+    <div className={`flex lg:flex font-['Arial']`}>
+      <Layout isExpanded={isExpanded} toggleSidebar={toggleSidebar}>
+        <DashboardContent />
+      </Layout>
+    </div>
   );
 }
 export default Dashboard;

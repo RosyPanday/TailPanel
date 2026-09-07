@@ -7,13 +7,13 @@ function SearchInput() {
         <Search className="text-gray-600 size-4"></Search>
         <input
           type="text"
-          className="text-sm text-gray-900 outline-none w-36"
+          className="text-sm text-gray-900 outline-none w-36 "
           placeholder="Search..."
         />
       </div>
 
       {/* <span className="text-sm text-gray-500 ">Search...</span> */}
-      <div className="hidden lg:flex items-center text-gray-500 border border-gray-300 px-2 py-0.5  bg-white ">
+      <div className="hidden lg:flex items-center  text-gray-500 border border-gray-300 px-2 py-0.5  bg-white ">
         <Command className="size-2"></Command>
         <span className="text-xs">K</span>
       </div>
