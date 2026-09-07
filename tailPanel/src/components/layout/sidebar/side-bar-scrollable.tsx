@@ -9,9 +9,9 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
     const IconComponent: LucideIcon = item.icon;
     const isDashboard = item.id === "dashboards";
     return (
-      <div key={item.id} className="flex flex-col ml-3 ">
+      <div key={item.id} className="flex flex-col ml-3 m-3 ">
         <button
-          className={`flex justify-between items-center p-3 m-1 ${isDashboard ? "bg-blue-100 rounded-lg " : "bg-white"}`}
+          className={`flex justify-between items-center p-2 m-1 ${isDashboard ? "bg-blue-100 rounded-lg " : "bg-white"} cursor-pointer`}
         >
           <div className="flex gap-3 items-center">
             <span>
@@ -28,7 +28,7 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
           <div>
             <span className={`${isExpanded ? "block" : "hidden"}`}>
               <ChevronDown
-                className={`${isDashboard ? "text-blue-600" : "text-gray-600"}`}
+                className={`${isDashboard ? "text-blue-600" : "text-gray-600"} w-4 h-4`}
               />
             </span>
           </div>
