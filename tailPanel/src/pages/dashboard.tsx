@@ -8,7 +8,7 @@ function Dashboard() {
 
   return (
     <>
-      <div className= {`grid grid-cols-12 ${isExpanded?" lg:flex ":""} lg:flex font-['Arial']`}>
+      <div className= {`grid grid-cols-12 lg:flex font-['Arial']`}>
         <Layout isExpanded={isExpanded} toggleSidebar={toggleSidebar} >
            <DashboardContent />
           </Layout>

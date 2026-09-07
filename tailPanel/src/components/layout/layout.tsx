@@ -11,7 +11,7 @@ function Layout({ isExpanded,toggleSidebar,children}:LayoutProps) {
       )}
       {/* sidebar */}
       <div
-        className={`${isExpanded ? "fixed w-60 sm:w-70  h-screen z-100 lg:static lg:col-span-3 bg-white " : "hidden lg:block lg:col-span-1"}`}
+        className={`${isExpanded ? "fixed w-60 sm:w-70 z-100  lg:col-span-3 bg-white " : "hidden lg:block"} lg:sticky lg:top-0 h-screen`}
       >
         <Sidebar isExpanded={isExpanded} toggleSidebar={toggleSidebar} />
       </div>
