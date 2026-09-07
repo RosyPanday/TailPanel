@@ -7,7 +7,7 @@ function Layout({ isExpanded,toggleSidebar,children}:LayoutProps) {
   return (
     <>
       {isExpanded && (
-        <div className="fixed inset-0 h-screen w-full z-50 bg-black/30 lg:hidden"></div>
+        <div className="fixed inset-0 h-screen w-full z-50 bg-black/30 lg:hidden" onClick={toggleSidebar}></div>
       )}
       {/* sidebar */}
       <div
