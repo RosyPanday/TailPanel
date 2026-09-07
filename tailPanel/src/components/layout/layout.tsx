@@ -17,7 +17,7 @@ function Layout({ isExpanded,toggleSidebar,children}:LayoutProps) {
       </div>
       {/* navbar */}
       <div
-        className={`${isExpanded ? " col-span-12  lg:col-span-9   " : "col-span-12 lg:col-span-11"}    flex flex-col`}
+        className={`${isExpanded ? " col-span-12 " : "col-span-12 lg:flex-1"} flex flex-col`}
       >
         <Navbar toggleSidebar={toggleSidebar}/>
         <main className="bg-gray-100 min-h-screen flex-1">
