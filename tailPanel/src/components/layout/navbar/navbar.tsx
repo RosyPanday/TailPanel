@@ -5,7 +5,7 @@ import AdminUserCard from "../adminUser/admin-user-card.js";
 
 function Navbar({ toggleSidebar }:{toggleSidebar:()=>void}) {
   return (
-    <nav className="flex  justify-between m-2 ">
+    <nav className="flex justify-between m-2">
       <div className="flex gap-5 items-center">
         <button onClick={toggleSidebar} className="p-3">
           <Menu className="text-gray-600 " />
