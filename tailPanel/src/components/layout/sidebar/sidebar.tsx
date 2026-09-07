@@ -24,7 +24,7 @@ function Sidebar({ isExpanded ,toggleSidebar}:SidebarProps) {
       </div>
 
       <div className="flex items-center gap-3  ml-3 pt-3 pb-3 border-r border-t border-gray-100  ">
-        <span className={`${isExpanded?"p-2 m-1": "p-2 m-4 "}text-white font-bold bg-blue-500 rounded-full`}>AS</span>
+        <span className={`${isExpanded?"p-2 m-1": "px-3 py-3 my-4 mx-2 "}text-white font-bold bg-blue-500 rounded-full text-sm h-11`}>AS</span>
         <div className={`${isExpanded?"flex flex-col":"hidden"}`}>
            <AdminUserCard />
         </div>
