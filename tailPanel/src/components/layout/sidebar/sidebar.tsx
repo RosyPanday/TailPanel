@@ -14,7 +14,7 @@ function Sidebar({ isExpanded ,toggleSidebar}:SidebarProps) {
               </span>
               <span className={`${isExpanded?" block font-bold text-xl":"hidden"}`} >TailPanel</span>
             </div>
-            <button onClick={toggleSidebar} className={`${isExpanded?"font-normal px-2 rounded-lg text-lg hover:bg-gray-100":"md:block lg:hidden p-3 "} cursor-pointer`}>
+            <button onClick={toggleSidebar} className={`${isExpanded?"font-normal px-2 rounded-lg text-lg hover:bg-gray-100 ":"md:block p-3 "} lg:hidden cursor-pointer`}>
               🗙
             </button>
         </div>
