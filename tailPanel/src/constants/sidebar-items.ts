@@ -7,17 +7,34 @@ import {
   Boxes,
   FileText,
   ShieldCheck,
-  type LucideIcon,
+  Home,
+  LineChart,
+  Briefcase,
+  Megaphone,
+  BarChart3,
+  Bitcoin,
+  Truck,
+  TrendingUp,
 } from "lucide-react";
 
-export interface SidebarItem {
-  id: string;
-  label: string;
-  icon: LucideIcon;
-}
+import type { SidebarItem } from "../types/sidebar.js";
 
 export const SIDEBAR_ITEMS: SidebarItem[] = [
-  { id: "dashboards", label: "Dashboards", icon: LayoutGrid },
+  {
+    id: "dashboards",
+    label: "Dashboards",
+    icon: LayoutGrid,
+    subItems: [
+      { id: "default", label: "Default", subItemIcon: Home },
+      { id: "crm", label: "CRM", subItemIcon: Briefcase },
+      { id: "saas", label: "SaaS", subItemIcon: LineChart },
+      { id: "marketing", label: "Marketing", subItemIcon: Megaphone },
+      { id: "analytics", label: "Analytics", subItemIcon: BarChart3 },
+      { id: "crypto", label: "Crypto", subItemIcon: Bitcoin },
+      { id: "logistics", label: "Logistics", subItemIcon: Truck },
+      { id: "stocks", label: "Stocks", subItemIcon: TrendingUp },
+    ],
+  },
   { id: "ecommerce", label: "E-Commerce", icon: ShoppingCart },
   { id: "apps", label: "Apps", icon: AppWindow },
   { id: "aitools", label: "AI Tools", icon: Sparkles },

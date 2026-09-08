@@ -1,6 +1,6 @@
 import { Menu, Globe, Monitor, Bell } from "lucide-react";
-import SearchInput from "../../../form/search-input.js";
 import AdminUserCard from "../adminUser/admin-user-card.js";
+import SearchInput from "../../form/search-input.js";
 
 
 function Navbar({ toggleSidebar }:{toggleSidebar:()=>void}) {
