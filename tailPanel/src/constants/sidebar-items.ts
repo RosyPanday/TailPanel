@@ -25,7 +25,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     label: "Dashboards",
     icon: LayoutGrid,
     subItems: [
-      { id: "default", label: "Default", subItemIcon: Home },
+      { id: "default", label: "Sign up", subItemIcon: Home },
       { id: "crm", label: "CRM", subItemIcon: Briefcase },
       { id: "saas", label: "SaaS", subItemIcon: LineChart },
       { id: "marketing", label: "Marketing", subItemIcon: Megaphone },
