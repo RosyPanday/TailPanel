@@ -1,8 +1,8 @@
 function AdminUserCard() {
   return (
     <>
-      <span className="text-md ">Admin User</span>
-      <span className="text-sm text-gray-600 ">admin@tailpanel.com</span>
+      <span className="text-md ">Guest User</span>
+      <span className="text-sm text-gray-600 ">guest@tailpanel.com</span>
     </>
   );
 }

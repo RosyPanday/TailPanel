@@ -16,7 +16,7 @@ export function UseSideBarScrollable() {
   };
 
   const loadDefaultSignupPage = () => {
-    navigate("/signup");
+    navigate("/");
   };
 
   return {

@@ -19,7 +19,7 @@ function Navbar({ toggleSidebar }:{toggleSidebar:()=>void}) {
         <Bell className="text-gray-600 cursor-pointer"></Bell>
         <div className="flex gap-2 items-center justify-center">
           <span className="bg-blue-400 rounded-3xl px-3 py-2.5 text-white font-bold ">
-            AS
+            GT
           </span>
           <div className="hidden sm:flex flex-col ">
             <AdminUserCard />

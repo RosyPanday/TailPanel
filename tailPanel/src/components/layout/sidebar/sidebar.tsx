@@ -35,9 +35,9 @@ function Sidebar({ isExpanded, toggleSidebar }: SidebarProps) {
         className={`flex items-center ${isExpanded ? "px-4" : "justify-center "} gap-3  py-3 border-r border-t border-gray-100  `}
       >
         <span
-          className={`${isExpanded ? "p-2 m-1" : "p-3 m-2 "}text-white font-bold bg-blue-500 rounded-full text-sm `}
+          className={`${isExpanded ? "p-2 m-1 " : "p-3 m-2 "}text-white font-bold bg-blue-500 rounded-full text-sm `}
         >
-          AS
+          GT
         </span>
         <div className={`${isExpanded ? "flex flex-col" : "hidden"}`}>
           <AdminUserCard />
