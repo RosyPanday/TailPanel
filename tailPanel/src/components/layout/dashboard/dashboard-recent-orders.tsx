@@ -1,14 +1,15 @@
 import { RECENT_ORDERS } from "../../../constants/dashbaord-items.js";
+import { StatusEnum } from "../../../enums/status-enum.js";
 
 function DashboardRecentOrders() {
   return RECENT_ORDERS.map((item) => {
     const status=item.status;
     let classes="";
-    if(status==="completed"){
+    if(status===StatusEnum.completed){
         classes="bg-green-100 text-green-600"
-    } else if(status==="pending"){
+    } else if(status===StatusEnum.pending){
         classes="bg-amber-100 text-amber-600"
-    } else{
+    } else if(status===StatusEnum.processing){
         classes="bg-blue-100 text-blue-600"
     }
     return (
