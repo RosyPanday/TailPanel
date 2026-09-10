@@ -14,10 +14,10 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
     const isParentOpen = activeItem?.id === item.id;
 
     return (
-      <div key={item.id} className="flex flex-col m-3 ml-3">
+      <div key={item.id} className="flex flex-col mx-3 mt-2">
         <button
           onClick={() => toggleSidebarItem(item)}
-          className={`flex justify-between ${isExpanded?"":"lg:justify-center"} items-center p-2 m-1 ${isDashboard ? "bg-blue-100 rounded-lg " : "bg-white"} cursor-pointer`}
+          className={`flex justify-between m-1 ${isExpanded?"":"lg:justify-center lg:m-2"} items-center p-2 ${isDashboard ? "bg-blue-100 rounded-lg " : "bg-white"} cursor-pointer`}
         >
           <div className="flex gap-3 items-center ">
             <span>
@@ -34,7 +34,7 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
           <div>
             <span className={`${isExpanded ? "block" : "hidden"}`}>
               <ChevronDown
-                className={`${isDashboard ? "text-blue-600" : "text-gray-600"} size-4`}
+                className={`transition-transform duration-500 ${isDashboard ? "text-blue-600" : "text-gray-600"} size-4 ${isParentOpen ? "rotate-180" : "rotate-0"}`}
               />
             </span>
           </div>
@@ -48,7 +48,7 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
               : "grid-rows-[0fr] opacity-0 mt-0"
           }`}
         >
-          <div className="overflow-hidden">
+          <div className="flex flex-col gap-1 overflow-hidden">
             <SidebarSubItem item={item} loadDefaultSignupPage={loadDefaultSignupPage} />
           </div>
         </div>

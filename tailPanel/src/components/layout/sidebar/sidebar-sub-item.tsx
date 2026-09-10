@@ -14,7 +14,7 @@ function SidebarSubItem({
       <div className="flex flex-col" key={subItem.id}>
         <button
           onClick={loadDefaultSignupPage}
-          className={`flex gap-3 p-2 px-3 items-center ${isDefault ? "bg-blue-100" : ""}  rounded-lg`}
+          className={`flex gap-3 p-2 px-3 items-center ${isDefault ? "bg-blue-100" : "bg-gray-100"}  rounded-lg cursor-pointer`}
         >
           <div>
             <IconComponent
