@@ -1,55 +1,108 @@
+import { User, Mail, Lock } from "lucide-react";
+
 import { useSignup } from "../../../hooks/use-signup.js";
+import honey from "../../../assets/icons/honey.svg";
 
 const SignupContent = () => {
-
-  const { register, handleSubmit,onSubmitEvent, errors } = useSignup();
+  const { register, handleSubmit, onSubmitEvent, errors } = useSignup();
 
   return (
-    <div className="flex bg-white w-lg justify-center rounded-lg ">
-      <form
-        onSubmit={handleSubmit(onSubmitEvent)}
-        className="flex flex-1 flex-col m-5 gap-3"
-      >
-        <div className="bg-blue-400 rounded-lg p-3 text-white font-bold text-lg justify-center">
-          Sign Up to Tailpanel
+    <div className="bg-white shadow-2xl w-full rounded-lg p-5">
+      <div className="flex flex-col gap-5">
+        {/* title */}
+        <div className="flex gap-4 items-center">
+          <div className="size-8">
+            <img src={honey} />
+          </div>
+          <div className="font-bold text-xl ">Tailpanel</div>
         </div>
-        {/* full name */}
-        <div className="flex flex-col  ">
-          <span className="text-blue-700">Full Name</span>
-          <input
-            className="bg-gray-50 rounded-lg p-2 text-gray-600"
-            {...register("fullName")}
-            type="text"
-            placeholder="Full Name"
-          />
+        {/* create your account */}
+        <div className="flex gap-3">
+          <div className="text-3xl font-bold">Create Your</div>
+          <div className="text-3xl font-bold text-blue-600">Account</div>
         </div>
-        {/* email address */}
-        <span className="text-blue-700">Email Address</span>
-        <input
-          className="bg-gray-50 rounded-lg p-2 text-gray-600"
-          {...register("email")}
-          type="text"
-          placeholder="Email Address"
-        />
-        {errors.email && <div className="text-red-600">{errors.email.message}</div>}
-        {/* password */}
-        <span className="text-blue-700">Password</span>
-        <input
-          {...register("password")}
-          type="password"
-          placeholder="Password"
-        />
-        {errors.password && <div className="text-red-600">{errors.password.message}</div>}
-
-        <button
-          type="submit"
-          className="bg-blue-400 rounded-lg p-3 text-white font-bold"
+        {/* getstarted */}
+        <div>
+          <span className="text-sm text-gray-500">
+            {" "}
+            Get started with Tailpanel and view the admin dashbaord to manage
+            your decision more efficiently.
+          </span>
+        </div>
+        {/* form */}
+        <form
+          onSubmit={handleSubmit(onSubmitEvent)}
+          className="flex flex-col gap-5"
         >
-          {" "}
-          Submit
-        </button>
-        {errors.root && <div className="text-red-600"> {errors.root.message}</div>}
-      </form>
+          {/* Full Name */}
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-3 items-center ">
+              <div>
+                <User className="size-5 text-gray-800" />
+              </div>
+              <div className="text-gray-800"> Full Name</div>
+            </div>
+            <input
+              className="px-4 py-2 rounded-lg bg-gray-100"
+              {...register("fullName")}
+              type="text"
+              placeholder="Full Name"
+            />
+            {errors.fullName && (
+              <p className="text-red-600">{errors.fullName.message}</p>
+            )}
+          </div>
+
+          {/* email */}
+
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-3 items-center ">
+              <div>
+                <Mail className="size-5 text-gray-800" />
+              </div>
+              <div className="text-gray-800"> Email</div>
+            </div>
+            <input
+              className="px-4 py-2 rounded-lg bg-gray-100"
+              {...register("email")}
+              type="text"
+              placeholder="Email Address"
+            />
+            {errors.email && (
+              <p className="text-red-600">{errors.email.message}</p>
+            )}
+          </div>
+
+          {/* password */}
+
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-3 items-center ">
+              <div>
+                <Lock className="size-5 text-gray-800" />
+              </div>
+              <div className="text-gray-800"> Password</div>
+            </div>
+            <input
+              className="px-4 py-2 rounded-lg bg-gray-100"
+              {...register("password")}
+              type="password"
+              placeholder="Password"
+            />
+            {errors.password && (
+              <p className="text-red-600">{errors.password.message}</p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            className="bg-blue-600 text-white font-semibold text-lg rounded-lg py-3"
+          >
+            Submit
+          </button>
+
+          {errors.root && <p className="text-red-600">{errors.root.message}</p>}
+        </form>
+      </div>
     </div>
   );
 };
