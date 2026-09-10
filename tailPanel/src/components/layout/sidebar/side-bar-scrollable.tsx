@@ -14,12 +14,12 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
     const isParentOpen = activeItem?.id === item.id;
 
     return (
-      <div key={item.id} className="flex flex-col ml-3 m-3 ">
+      <div key={item.id} className="flex flex-col m-3 ml-3">
         <button
           onClick={() => toggleSidebarItem(item)}
-          className={`flex justify-between items-center p-2 m-1 ${isDashboard ? "bg-blue-100 rounded-lg " : "bg-white"} cursor-pointer`}
+          className={`flex justify-between ${isExpanded?"":"lg:justify-center"} items-center p-2 m-1 ${isDashboard ? "bg-blue-100 rounded-lg " : "bg-white"} cursor-pointer`}
         >
-          <div className="flex gap-3 items-center">
+          <div className="flex gap-3 items-center ">
             <span>
               <IconComponent
                 className={`${isDashboard ? "text-blue-600" : "text-gray-600"} size-5`}
