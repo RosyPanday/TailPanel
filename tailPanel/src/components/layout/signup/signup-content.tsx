@@ -43,7 +43,7 @@ const SignupContent = () => {
               <div className="text-gray-800"> Full Name</div>
             </div>
             <input
-              className="px-4 py-2 rounded-lg bg-gray-100"
+              className="px-4 py-2 rounded-lg bg-gray-100 xs:w-30"
               {...register("fullName")}
               type="text"
               placeholder="Full Name"
