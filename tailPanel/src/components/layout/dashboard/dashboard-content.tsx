@@ -1,7 +1,9 @@
 import { House, ChevronRight } from "lucide-react";
+
 import DashboardStatCards from "./dashbaord-stat-cards.js";
 import DashboardCharts from "./dashbaord-charts.js";
 import DashboardRecentOrders from "./dashboard-recent-orders.js";
+import DashboardUsers from "./dashboard-users-from-api.js";
 
 function DashboardContent() {
   return (
@@ -33,6 +35,22 @@ function DashboardContent() {
         <div className="flex flex-1 flex-col bg-white p-5 rounded-lg">
           <h3 className="font-bold text-2xl">Recent Orders</h3>
           <DashboardRecentOrders />
+        </div>
+      </div>
+      {/* users from api */}
+      <div className="p-3 bg-white mt-3 rounded-xl">
+        <div className="m-2">
+          <h3 className="font-bold text-2xl">Dummy JSON Users</h3>
+          <p className="text-xs text-slate-500 font-mono mt-1">
+            Fetched via <span className="text-blue-600 font-semibold">GET</span>{" "}
+            request from{" "}
+            <code className="bg-slate-100 px-1 py-0.5 rounded">
+              dummyjson.com/users
+            </code>
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-3 m-2 overflow-wrap">
+          <DashboardUsers />
         </div>
       </div>
     </div>

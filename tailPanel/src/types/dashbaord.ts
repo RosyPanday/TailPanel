@@ -24,12 +24,19 @@ export interface RecentOrdersInterface {
   status: string;
 }
 
-export interface TopProducsInterface{
+export interface TopProducsInterface {
+  id: number;
+  product: string;
+  sales: string;
+  revenue: string;
+  growth: string;
+  isPositive: boolean;
+}
 
-    id: number,
-    product: string,
-    sales: string,
-    revenue: string,
-    growth: string,
-    isPositive: boolean,
+export interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  image: string;
 }
