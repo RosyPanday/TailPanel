@@ -6,12 +6,8 @@ import AddProduct from "./components/layout/product/add-product.js";
 
 export const router =  createBrowserRouter([
     {
-        path:"/dashboard",
-        element:<Dashboard />
-    },
-    {
         path:"/",
-        element:<Signup />
+        element:<Dashboard />
     },
     {
         path:"/add-product",

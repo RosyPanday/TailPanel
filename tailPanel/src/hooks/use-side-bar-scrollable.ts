@@ -15,13 +15,13 @@ export function UseSideBarScrollable() {
     }
   };
 
-  const loadDefaultSignupPage = () => {
-    navigate("/");
+  const loadRequiredPage = (subItemId: string) => {
+    navigate(`/${subItemId}`);
   };
 
   return {
     activeItem,
     toggleSidebarItem,
-    loadDefaultSignupPage,
+    loadRequiredPage,
   };
 }

@@ -6,7 +6,7 @@ import { UseSideBarScrollable } from "../../../hooks/use-side-bar-scrollable.js"
 import SidebarSubItem from "./sidebar-sub-item.js";
 
 function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
-  const { activeItem, toggleSidebarItem,loadDefaultSignupPage } = UseSideBarScrollable();
+  const { activeItem, toggleSidebarItem,loadRequiredPage } = UseSideBarScrollable();
 
   return SIDEBAR_ITEMS.map((item) => {
     const IconComponent: LucideIcon = item.icon;
@@ -49,7 +49,7 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
           }`}
         >
           <div className="flex flex-col gap-1 overflow-hidden">
-            <SidebarSubItem item={item} loadDefaultSignupPage={loadDefaultSignupPage} />
+            <SidebarSubItem item={item} loadRequiredPage={loadRequiredPage} />
           </div>
         </div>
       </div>

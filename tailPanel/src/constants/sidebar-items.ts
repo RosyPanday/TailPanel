@@ -15,6 +15,10 @@ import {
   Bitcoin,
   Truck,
   TrendingUp,
+  Package,
+  Plus,
+  FileEdit,
+  ArrowRightLeft,
 } from "lucide-react";
 
 import type { SidebarItem } from "../types/sidebar.js";
@@ -25,7 +29,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     label: "Dashboards",
     icon: LayoutGrid,
     subItems: [
-      { id: "default", label:"Log Out", subItemIcon: Home },
+      { id: "default", label: "Log Out", subItemIcon: Home },
       { id: "crm", label: "CRM", subItemIcon: Briefcase },
       { id: "saas", label: "SaaS", subItemIcon: LineChart },
       { id: "marketing", label: "Marketing", subItemIcon: Megaphone },
@@ -35,7 +39,22 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
       { id: "stocks", label: "Stocks", subItemIcon: TrendingUp },
     ],
   },
-  { id: "ecommerce", label: "E-Commerce", icon: ShoppingCart },
+  {
+    id: "ecommerce",
+    label: "E-Commerce",
+    icon: ShoppingCart,
+    subItems: [
+      { id: "products", label: "Products", subItemIcon: Package },
+      { id: "add-product", label: "Add Product", subItemIcon: Plus },
+      { id: "invoices", label: "Invoices", subItemIcon: FileText },
+      { id: "create-invoice", label: "Create Invoice", subItemIcon: FileEdit },
+      {
+        id: "transactions",
+        label: "Transactions",
+        subItemIcon: ArrowRightLeft,
+      },
+    ],
+  },
   { id: "apps", label: "Apps", icon: AppWindow },
   { id: "aitools", label: "AI Tools", icon: Sparkles },
   { id: "support", label: "Support", icon: Headphones },
