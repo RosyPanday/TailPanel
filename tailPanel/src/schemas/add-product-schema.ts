@@ -5,8 +5,8 @@ export const addProductSchema = z.object({
     sku:z.string().min(5),
     category:z.enum(["ELECTRONICS","CLOTHING","ACCESORIES","HOME_AND_GARDEN","SPORTS"]),
     description:z.string().min(15),
-    price:z.number().min(1).max(10000),
-    quantity:z.number().min(0).max(20000),
+    price:z.coerce.number().min(1).max(10000),
+    quantity:z.coerce.number().min(0).max(20000),
     status: z.enum(["IN_STOCK","OUT_OF_STOCK","LOW_STOCK"]),
     supplier: z.string().min(3),
     image:z.custom<FileList|File>((val)=> val instanceof FileList || val instanceof File)

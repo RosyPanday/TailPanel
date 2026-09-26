@@ -1,5 +1,3 @@
-
-
 function ProductImage({ register, errors }: {
   register: any;
   errors: any;

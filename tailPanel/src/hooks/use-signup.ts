@@ -17,7 +17,7 @@ export function useSignup() {
 
   const onSubmitEvent: SubmitHandler<FormFields> = (data) => {
     try {
-      navigate("/dashboard");
+      navigate("/");
       // throw new Error("kdshg");
     } catch (error) {
       setError("root", {
