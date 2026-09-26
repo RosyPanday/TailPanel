@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "./pages/dashboard.js";
 import AddProduct from "./components/layout/product/add-product.js";
 import ViewProducts from "./components/layout/viewProducts/view-products.js";
+import AddInvoice from "./components/layout/invoice/add-invoice.js";
 
 
 export const router =  createBrowserRouter([
@@ -16,5 +17,8 @@ export const router =  createBrowserRouter([
     {
         path:"/products",
         element:<ViewProducts />
+    },{
+        path:"/create-invoice",
+        element:<AddInvoice />
     }
 ])
