@@ -9,7 +9,7 @@ function InvoiceCustomerInformation({
     <div className="flex flex-col gap-3 p-5 bg-white rounded-2xl">
       <h3 className="font-semibold text-xl">Customer Information</h3>
       {/* customer name and email address */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-wrap ">
         <div className="flex flex-col gap-4">
           {/* customer name */}
           <div className="text-gray-800">Customer Name *</div>
@@ -52,7 +52,7 @@ function InvoiceCustomerInformation({
         )}
       </div>
       {/* city state zip*/}
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4">
         <div className="flex flex-col gap-4">
           <div className="text-gray-800">City, State, ZIP </div>
           <input

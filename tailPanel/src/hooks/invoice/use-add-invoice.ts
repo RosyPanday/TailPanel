@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { useAddInvoiceMutation } from "./use-add-invoice-mutation.js";
 import { addInvoiceSchema, type AddInvoiceInput, type AddInvoiceOutput } from "../../schemas/add-invoice-schema.js";
+import { toast } from "sonner";
 
 export function useAddInvoices() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export function useAddInvoices() {
     handleSubmit,
     reset,
     control,
-    formState: { errors },
+    formState: { errors , isSubmitting},
   } = useForm<AddInvoiceInput, any, AddInvoiceOutput>({
     resolver: zodResolver(addInvoiceSchema),
   });
@@ -23,6 +24,7 @@ export function useAddInvoices() {
   const onSubmitEvent: SubmitHandler<AddInvoiceOutput> = async (data) => {
     try {
       await addInvoiceMutation.mutateAsync(data);
+      toast.success("Added your new invoice.");
       reset();
       navigate("/create-invoice");
     } catch (error) {
@@ -39,5 +41,6 @@ export function useAddInvoices() {
     errors,
     control,
     onSubmitEvent,
+    isPending: addInvoiceMutation.isPending || isSubmitting,
   };
 }

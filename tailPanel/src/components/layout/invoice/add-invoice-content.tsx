@@ -8,7 +8,7 @@ import InvoiceActions from "./invoice-actions.js";
 import { useAddInvoices } from "../../../hooks/invoice/use-add-invoice.js";
 
 function AddInvoiceContent() {
-  const { register, handleSubmit, onSubmitEvent, errors, control } =
+  const { register, handleSubmit, onSubmitEvent, errors, control, isPending } =
     useAddInvoices();
   return (
     <div className="flex flex-col gap-4 m-4">
@@ -45,7 +45,7 @@ function AddInvoiceContent() {
       </div>
       {/* form */}
       <form onSubmit={handleSubmit(onSubmitEvent)}>
-        <div className="flex flex-wrap w-full gap-3">
+        <div className="flex flex-1 flex-wrap w-full gap-3">
           {/* first holder */}
           <div className="flex flex-1 flex-col gap-3">
             <InvoiceCustomerInformation register={register} errors={errors} />
@@ -57,10 +57,10 @@ function AddInvoiceContent() {
             <InvoiceAdditionalNotes register={register} errors={errors} />
           </div>
           {/* left side holder */}
-          <div className="flex flex-col gap-4 ">
+          <div className="flex flex-1 flex-col gap-4 lg:flex-none lg:w-90 ">
              <InvoiceDates register={register} errors={errors}  />
              <InvoiceSummary control={control}/>
-             <InvoiceActions />
+             <InvoiceActions isPending={isPending} />
           </div>
         </div>
       </form>

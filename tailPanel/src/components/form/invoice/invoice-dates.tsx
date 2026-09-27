@@ -1,6 +1,6 @@
 function InvoiceDates({ register, errors }: { register: any; errors: any }) {
   return (
-    <div className="flex flex-col lg:w-90  gap-4 bg-white rounded-lg p-4">
+    <div className="flex flex-col gap-4 bg-white rounded-lg p-4">
       <h3 className="font-bold text-xl">Invoice Details</h3>
       {/* issued date */}
       <div className="text-gray-800">Issue Date *</div>

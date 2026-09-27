@@ -13,10 +13,10 @@ function InvoiceItems({ register, errors ,control}: { register: any; errors: any
       {/* heading */}
       <div className="flex justify-between">
         <h3 className="font-semibold text-xl">Invoice Items</h3>
-        <div className="border border-blue-600 p-2 flex gap-3">
+        {/* <div className="border border-blue-600 p-2 flex gap-3">
           <Plus className="text-blue-600"></Plus>
           <span className="text-blue-600"> Add Item</span>
-        </div>
+        </div> */}
       </div>
       {/* box */}
       <div className="border border-gray-400 rounded-lg flex-col gap-4 p-4">
@@ -31,7 +31,7 @@ function InvoiceItems({ register, errors ,control}: { register: any; errors: any
           {errors.description && (
             <p className="text-red-600">{errors.description.message}</p>
           )}
-          <div className="flex gap -3">
+          <div className="flex gap-3 flex-wrap">
             <div className="flex flex-col gap-3">
               <div className="text-gray-800">Quantity *</div>
               <input

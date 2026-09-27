@@ -11,7 +11,7 @@ function InvoiceSummary({control}:{control:any}){
   const tax = subtotal * 0.1; 
   const total = subtotal + tax;
   return(
-     <div className="bg-white rounded-lg p-4 flex flex-col gap-4 lg:w-90">
+     <div className="bg-white rounded-lg p-4 flex flex-col gap-4">
        <h3 className="font-semibold text-xl"> Summary</h3>
        <div className="flex justify-between">
           <div className="text-gray-600"> Subtotal</div>

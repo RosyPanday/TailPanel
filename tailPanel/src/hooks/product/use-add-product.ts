@@ -29,7 +29,6 @@ export function useAddProducts() {
 
   const onSubmitEvent: SubmitHandler<AddProductOutput> = async (data) => {
     try {
-      console.log(data);
       await addProductMutation.mutateAsync(data);
       toast.success("Product added to database successfully. View products to view the new product");
       reset();
