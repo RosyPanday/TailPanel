@@ -1,7 +1,7 @@
 import type { UseDashboardReturn } from "../types/layout.js";
-import { useDashboard } from "../hooks/use-dashboard.js";
 import Layout from "../components/layout/layout.js";
 import DashboardContent from "../components/layout/dashboard/dashboard-content.js";
+import { useDashboard } from "../hooks/dashboard/use-dashboard.js";
 
 function Dashboard() {
   const { isExpanded, toggleSidebar }: UseDashboardReturn = useDashboard();

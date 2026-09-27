@@ -1,5 +1,5 @@
+import { useDashboard } from "../../../hooks/dashboard/use-dashboard.js";
 import type { UseDashboardReturn } from "../../../types/layout.js";
-import { useDashboard } from "../../../hooks/use-dashboard.js";
 import Layout from "../layout.js";
 import ViewProductContent from "./view-product-content.js";
 

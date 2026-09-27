@@ -1,10 +1,10 @@
 import { Home, ChevronRight } from "lucide-react";
-import { useAddProducts } from "../../../hooks/use-add-product.js";
-import ProductInformation from "./product-information.js";
 import PricingAndInventory from "./pricing-and-inventory.js";
 import ProductImage from "./product-image.js";
 import Action from "./actions.js";
 import ProductStatus from "./product-status.js";
+import { useAddProducts } from "../../../hooks/product/use-add-product.js";
+import ProductInformation from "./product-information.js";
 
 function AddProductContent() {
   const { register, handleSubmit, onSubmitEvent, errors } = useAddProducts();

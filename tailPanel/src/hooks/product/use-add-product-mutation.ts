@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
-import type { AddProductOutput } from "../schemas/add-product-schema.js";
+import type { AddProductOutput } from "../../schemas/add-product-schema.js";
 
 export function useAddProductMutation() {
   return useMutation({

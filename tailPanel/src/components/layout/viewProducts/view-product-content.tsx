@@ -1,7 +1,27 @@
+import { ChevronRight, Home } from "lucide-react";
+import { useGetProductsQuery } from "../../../hooks/product/use-get-products-query.js";
+import ProductList from "./productList.js";
+
 function ViewProductContent() {
+  const {data,isPending,error}= useGetProductsQuery();
   return (
-    <div>
-      <p>THIS IS THE PAGE TO VIEW YOUR PRODUCTS</p>
+    <div className="flex flex-col gap-3 p-4">
+      {/* heading */}
+      <div className="flex items-center gap-3">
+          <button><Home className="size-4 text-gray-600 cursor-pointer"></Home></button>
+          <ChevronRight className="size-4 text-gray-600" ></ChevronRight>
+          <button className=" text-gray-600 cursor-pointer ">E-Commerce</button>
+          <ChevronRight className="size-4 text-gray-600" ></ChevronRight>
+          <button className=" text-black font-semibold cursor-pointer">Products</button>
+      </div>
+      {/* products */}
+      <div className="flex flex-col gap-3">
+          {isPending && <p>Data is loading . please wait a while</p>}
+          {error &&  <p className="text-red-900">something went wrong</p>}
+          <div className="flex gap-4">
+          {data && <ProductList data={data}/>}
+          </div>
+      </div>
     </div>
   );
 }

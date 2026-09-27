@@ -1,13 +1,10 @@
 import { useForm, type SubmitHandler } from "react-hook-form";
 
-import {
-  addProductSchema,
-  type AddProductInput,
-  type AddProductOutput,
-} from "../schemas/add-product-schema.js";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
 import { useAddProductMutation } from "./use-add-product-mutation.js";
+import { addProductSchema, type AddProductInput, type AddProductOutput } from "../../schemas/add-product-schema.js";
 
 export function useAddProducts() {
   const navigate = useNavigate();

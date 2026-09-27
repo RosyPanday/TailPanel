@@ -2,8 +2,8 @@ import { ChevronDown, type LucideIcon } from "lucide-react";
 
 import { SIDEBAR_ITEMS } from "../../../constants/sidebar-items.js";
 import type { SidebarScrollableProps } from "../../../types/layout.js";
-import { UseSideBarScrollable } from "../../../hooks/use-side-bar-scrollable.js";
 import SidebarSubItem from "./sidebar-sub-item.js";
+import { UseSideBarScrollable } from "../../../hooks/sidebar/use-side-bar-scrollable.js";
 
 function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
   const { activeItem, toggleSidebarItem,loadRequiredPage } = UseSideBarScrollable();

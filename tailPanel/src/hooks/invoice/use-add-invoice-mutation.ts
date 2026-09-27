@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { AddInvoiceOutput } from "../schemas/add-invoice-schema.js";
+import type { AddInvoiceOutput } from "../../schemas/add-invoice-schema.js";
 import { useMutation } from "@tanstack/react-query";
 
 export function useAddInvoiceMutation() {
