@@ -1,13 +1,13 @@
 import { Home, ChevronRight } from "lucide-react";
 import PricingAndInventory from "./pricing-and-inventory.js";
 import ProductImage from "./product-image.js";
-import Action from "./actions.js";
 import ProductStatus from "./product-status.js";
 import { useAddProducts } from "../../../hooks/product/use-add-product.js";
 import ProductInformation from "./product-information.js";
+import ProductAction from "./product-actions.js";
 
 function AddProductContent() {
-  const { register, handleSubmit, onSubmitEvent, errors } = useAddProducts();
+  const { register, handleSubmit, onSubmitEvent, errors ,isPending ,setValue, control,setPreviewImage,previewImage} = useAddProducts();
   return (
     <div className="flex flex-col gap-4 m-4">
       {/* top */}
@@ -34,14 +34,14 @@ function AddProductContent() {
       </div>
       {/* form */}
       <form onSubmit={handleSubmit(onSubmitEvent)}>
-        <div className="flex gap-6 w-full">
+        <div className="flex gap-6 w-full flex-col md:flex-row">
           <div className="flex flex-1  flex-col gap-4">
             <ProductInformation register={register} errors={errors} />
             <PricingAndInventory register={register} errors={errors} />
           </div>
           <div className="flex flex-col gap-5">
-             <ProductImage register={register} errors={errors}/>
-             <Action />
+             <ProductImage register={register} errors={errors} control={control} setValue={setValue} previewImage={previewImage} setPreviewImage={setPreviewImage}/>
+             <ProductAction isPending={isPending}/>
              <ProductStatus />
           </div>
         </div>

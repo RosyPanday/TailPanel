@@ -17,7 +17,7 @@ function ProductInformation({
         placeholder="Enter Product Name"
       />
       {errors.name && <p className="text-red-600">{errors.name.message}</p>}
-      <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         {/* SKU */}
         <div className="flex flex-col gap-3">
           <div className="text-gray-800">SKU *</div>
@@ -50,7 +50,7 @@ function ProductInformation({
       </div>
       {/* description */}
       <div className="text-gray-800">Description *</div>
-      <input
+      <textarea
         className="px-4 py-2 h-30 rounded-lg bg-gray-100 xs:w-30"
         {...register("description")}
         type="text"

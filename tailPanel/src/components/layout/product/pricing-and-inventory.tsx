@@ -8,7 +8,7 @@ function PricingAndInventory({
   return (
     <div className="flex flex-1 flex-col gap-4 bg-white rounded-lg p-4">
       <div className="font-semibold text-3xl">Pricing & Inventory </div>
-      <div className=" flex gap-3">
+      <div className=" flex flex-col md:flex-row  gap-3">
         {/* price */}
         <div className="flex flex-col gap-4">
           <div className="text-gray-800">Price *</div>
@@ -37,7 +37,7 @@ function PricingAndInventory({
         </div>
       </div>
       {/* stock status and supplier */}
-      <div className=" flex gap-3">
+      <div className=" flex flex-col md:flex-row gap-3">
         {/* price */}
         <div className="flex flex-col gap-4">
           <div className="text-gray-800">Stock Status *</div>
