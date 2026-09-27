@@ -10,23 +10,23 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
 
   return SIDEBAR_ITEMS.map((item) => {
     const IconComponent: LucideIcon = item.icon;
-    const isDashboard = item.id === "dashboards";
+    const isEcommerce = item.id === "ecommerce";
     const isParentOpen = activeItem?.id === item.id;
 
     return (
       <div key={item.id} className="flex flex-col mx-3 mt-2">
         <button
           onClick={() => toggleSidebarItem(item)}
-          className={`flex justify-between m-1 ${isExpanded?"":"lg:justify-center lg:m-2"} items-center p-2 ${isDashboard ? "bg-blue-100 rounded-lg " : "bg-white"} cursor-pointer`}
+          className={`flex justify-between m-1 ${isExpanded?"":"lg:justify-center lg:m-2"} items-center p-2 ${isEcommerce ? "bg-blue-100 rounded-lg " : "bg-white"} cursor-pointer`}
         >
           <div className="flex gap-3 items-center ">
             <span>
               <IconComponent
-                className={`${isDashboard ? "text-blue-600" : "text-gray-600"} size-5`}
+                className={`${isEcommerce ? "text-blue-600" : "text-gray-600"} size-5`}
               />
             </span>
             <span
-              className={`${isExpanded ? "text-lg " : "hidden"}  ${isDashboard ? "text-blue-700" : "text-gray-600"} `}
+              className={`${isExpanded ? "text-lg " : "hidden"}  ${isEcommerce ? "text-blue-700" : "text-gray-600"} `}
             >
               {item.label}
             </span>
@@ -34,7 +34,7 @@ function SideBarScrollable({ isExpanded }: SidebarScrollableProps) {
           <div>
             <span className={`${isExpanded ? "block" : "hidden"}`}>
               <ChevronDown
-                className={`transition-transform duration-500 ${isDashboard ? "text-blue-600" : "text-gray-600"} size-4 ${isParentOpen ? "rotate-180" : "rotate-0"}`}
+                className={`transition-transform duration-500 ${isEcommerce ? "text-blue-600" : "text-gray-600"} size-4 ${isParentOpen ? "rotate-180" : "rotate-0"}`}
               />
             </span>
           </div>

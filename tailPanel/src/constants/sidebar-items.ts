@@ -28,16 +28,6 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     id: "dashboards",
     label: "Dashboards",
     icon: LayoutGrid,
-    subItems: [
-      { id: "default", label: "Log Out", subItemIcon: Home },
-      { id: "crm", label: "CRM", subItemIcon: Briefcase },
-      { id: "saas", label: "SaaS", subItemIcon: LineChart },
-      { id: "marketing", label: "Marketing", subItemIcon: Megaphone },
-      { id: "analytics", label: "Analytics", subItemIcon: BarChart3 },
-      { id: "crypto", label: "Crypto", subItemIcon: Bitcoin },
-      { id: "logistics", label: "Logistics", subItemIcon: Truck },
-      { id: "stocks", label: "Stocks", subItemIcon: TrendingUp },
-    ],
   },
   {
     id: "ecommerce",
@@ -48,11 +38,6 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
       { id: "add-product", label: "Add Product", subItemIcon: Plus },
       { id: "invoices", label: "Invoices", subItemIcon: FileText },
       { id: "create-invoice", label: "Create Invoice", subItemIcon: FileEdit },
-      {
-        id: "transactions",
-        label: "Transactions",
-        subItemIcon: ArrowRightLeft,
-      },
     ],
   },
   { id: "apps", label: "Apps", icon: AppWindow },

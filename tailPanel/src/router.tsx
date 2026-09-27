@@ -3,6 +3,7 @@ import Dashboard from "./pages/dashboard.js";
 import AddProduct from "./components/layout/product/add-product.js";
 import ViewProducts from "./components/layout/viewProducts/view-products.js";
 import AddInvoice from "./components/layout/invoice/add-invoice.js";
+import ViewInvoices from "./components/layout/viewInvoices/view-invoices.js";
 
 
 export const router =  createBrowserRouter([
@@ -20,5 +21,8 @@ export const router =  createBrowserRouter([
     },{
         path:"/create-invoice",
         element:<AddInvoice />
+    },{
+        path:"/invoices",
+        element:<ViewInvoices />
     }
 ])
