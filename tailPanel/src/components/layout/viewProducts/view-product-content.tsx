@@ -18,7 +18,7 @@ function ViewProductContent() {
       <div className="flex flex-col gap-3">
           {isPending && <p>Data is loading . please wait a while</p>}
           {error &&  <p className="text-red-900">something went wrong</p>}
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
           {data && <ProductList data={data}/>}
           </div>
       </div>
