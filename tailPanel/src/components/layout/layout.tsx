@@ -5,10 +5,13 @@ import Sidebar from "./sidebar/sidebar.js";
 function Layout({ isExpanded, toggleSidebar, children }: LayoutProps) {
   return (
     <>
-      <div
+     {
+      isExpanded && 
+       <div
         className={`fixed inset-0 transition-all duration-1000 h-screen w-full z-50 ${isExpanded ? "bg-black/30 " : "bg-black/0 "} lg:hidden`}
         onClick={toggleSidebar}
       ></div>
+     }
       {/* sidebar */}
       <div
         className={`${isExpanded ? "fixed w-60 sm:w-70 z-100  bg-white" : "w-0 bg-white lg:w-23 lg:block"} lg:sticky lg:top-0 h-screen transition-all duration-500`}

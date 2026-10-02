@@ -12,7 +12,7 @@ function ProductList({ data }: { data: GetProductsResponse }) {
          statusStyle="bg-amber-100 text-amber-700";
     }
     return (
-      <div className="bg-white rounded-lg flex flex-col gap-3 p-3 mt-3 w-70 flex-1">
+      <div className="bg-white rounded-lg flex flex-col gap-3 p-3 mt-3 w-70 flex-1" key={product.id}>
         {/* image */}
         <div className="flex justify-start">
           <img
